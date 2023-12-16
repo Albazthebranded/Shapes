@@ -7,6 +7,5 @@ public class Rectangle extends Shapes {
         this.sideB = sideB;
         this.perimeter = 2 * (this.sideA + this.sideB);
         this.area = this.sideA * this.sideB;
-
     }
 }

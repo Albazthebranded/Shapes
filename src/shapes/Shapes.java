@@ -8,6 +8,7 @@ public abstract class Shapes {
     protected double angleA;
     protected double angleB;
     protected double angleC;
+    protected double radius;
     protected double perimeter;
     protected double semiPerimeter;
     protected double area;
