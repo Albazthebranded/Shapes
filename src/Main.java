@@ -1,6 +1,6 @@
 import shapes.Circle;
 import shapes.Rectangle;
-import shapes.Shapes;
+import shapes.Shape;
 import shapes.Triangle;
 
 import java.util.InputMismatchException;
@@ -26,8 +26,13 @@ public class Main {
                     double sideA = scan.nextDouble();
                     double sideB = scan.nextDouble();
                     double sideC = scan.nextDouble();
-                    Shapes triangle = new Triangle(sideA, sideB, sideC);
+                    Triangle triangle = new Triangle(sideA, sideB, sideC);
                     boolean isTriangle = true;
+
+                    if (sideA + sideB <= sideC || sideA + sideC <= sideB || sideB + sideC <= sideA) {
+                        System.out.println("This is not a valid triangle!");
+                        continue;
+                    }
 
                     while (isTriangle) {
                         System.out.println("To know the triangle's perimeter, type 'perimeter'.\nTo know its area, type 'area'.\nTo know a particular angle, type A, B, or C.\nTo select a new shape, type 'back'.\nTo close, type 'exit'.");
@@ -61,7 +66,7 @@ public class Main {
                 try {
                     double sideA = scan.nextDouble();
                     double sideB = scan.nextDouble();
-                    Shapes rectangle = new Rectangle(sideA, sideB);
+                    Rectangle rectangle = new Rectangle(sideA, sideB);
                     boolean isRectangle = true;
 
                     while (isRectangle) {
@@ -90,7 +95,7 @@ public class Main {
 
                 try {
                     double radius = scan.nextDouble();
-                    Shapes circle = new Circle(radius);
+                    Circle circle = new Circle(radius);
                     boolean isCircle = true;
 
                     while (isCircle) {
